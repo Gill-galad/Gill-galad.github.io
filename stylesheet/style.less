@@ -3,6 +3,7 @@
 @menu-size: 14px;
 @main-color: #343e5c;
 @border-color: #f0f2f7;
+@hoverColor: #007aff;
 
 html,
 body{
@@ -107,6 +108,11 @@ body{
             text-transform: uppercase;
             letter-spacing: 0.55px;
             cursor: pointer;
+            a{
+                padding: 8px 20px;
+                display: block;
+                box-sizing: border-box;
+            }
             &-counter{
                 background: #e3e8f0;
                 padding: 7px 9px;
@@ -127,6 +133,10 @@ body{
                 border: 2px solid #e3e8f0;
                 cursor: pointer;
                 padding: 8px 20px;
+                position: relative;
+                display: block;
+                box-sizing: border-box;
+                overflow: hidden;
             }
             a:before{
                 content: '';
@@ -135,8 +145,8 @@ body{
                 left: 0;
                 height: 100%;
                 width: 0;
-                background: #007aff;
-                transition: width 2s;
+                background: @hoverColor;
+                transition: width 1s;
                 z-index: 0;
             }
             a:hover:before{
@@ -147,6 +157,9 @@ body{
                 color: #fff;
                 position: relative;
                 z-index: 2;
+            }
+            .voiti{
+                position: relative;
             }
         }
     }
